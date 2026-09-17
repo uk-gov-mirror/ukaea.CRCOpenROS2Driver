@@ -1,6 +1,6 @@
 # Comau CRC Open ROS 2 Driver
 
-[![DOI](https://zenodo.org/badge/1075309612.svg)](https://doi.org/10.5281/zenodo.17969100)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22818354.svg)](https://zenodo.org/records/22818354)
 
 | ROS 2 Distro | **Humble** | **Jazzy** | **Lyrical** | **Rolling** |
 |---|---|---|---|---|
