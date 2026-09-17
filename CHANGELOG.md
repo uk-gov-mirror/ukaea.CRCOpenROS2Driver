@@ -2,7 +2,7 @@
 
 ## [0.6.0] - 2026-09-17
 
-- Updated the driver for ROS 2 Rolling.
+- Updated the driver for ROS 2 Jazzy.
 - Added support for up to ten axes.
 - Added generic linear-axis position and velocity support.
 - Added mock hardware support.
