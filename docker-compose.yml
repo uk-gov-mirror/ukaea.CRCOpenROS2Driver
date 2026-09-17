@@ -3,9 +3,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      pull: true
       args:
         ROS_DISTRO: ${ROS_DISTRO:-jazzy}
-    image: comau_driver:dev
     container_name: comau_dev
     stdin_open: true
     tty: true
@@ -13,14 +13,10 @@ services:
     ipc: host
     privileged: true
     environment:
-      - ROS_DISTRO=${ROS_DISTRO:-jazzy}
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
+    user: "${UID:-0}:${GID:-0}"
     volumes:
-      - ./:/ros2_ws/src/comau-crcopen-ros2-driver:rw
-      - ./.colcon/build:/ros2_ws/build:rw
-      - ./.colcon/install:/ros2_ws/install:rw
-      - ./.colcon/log:/ros2_ws/log:rw
+      - .:/ros2_ws/src:rw 
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-    command: bash -lc "install_dev.sh || true; sleep infinity"
-
+    command: bash -lc " sleep infinity"
